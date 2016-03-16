@@ -1,0 +1,18 @@
+{
+  "name": "modern-frontend-tools",
+  "description": "training 16th-17th march warsaw",
+  "main": "index.js",
+  "authors": [
+    "Janusz Bugajny <janusz.bugajny@cybercom.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/janekbug/modern-frontend-tools",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

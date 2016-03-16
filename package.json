@@ -12,5 +12,11 @@
   "bugs": {
     "url": "https://github.com/janekbug/modern-frontend-tools/issues"
   },
-  "homepage": "https://github.com/janekbug/modern-frontend-tools#readme"
+  "homepage": "https://github.com/janekbug/modern-frontend-tools#readme",
+  "dependencies": {
+    "lodash": "^4.6.1"
+  },
+  "devDependencies": {
+    "jquery": "^2.2.1"
+  }
 }
