@@ -1,0 +1,19 @@
+{
+  "name": "modern-frontend-tools",
+  "version": "1.0.0",
+  "description": "training 16th-17th march warsaw",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janekbug/modern-frontend-tools.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/janekbug/modern-frontend-tools/issues"
+  },
+  "homepage": "https://github.com/janekbug/modern-frontend-tools#readme"
+}
