@@ -1,6 +1,13 @@
 module.exports = function(grunt) {
+  var helpFunction = function(){
+    grunt.log.writeln('This is grunt help.');
+    grunt.log.writeln('Use "grunt build" to run default tasks.');
+  };
+
+  grunt.registerTask('help', 'displays help', helpFunction);
 
   grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
     jshint: {
       files: ['Gruntfile.js', 'src/**/*.js', 'test/**/*.js'],
       options: {
@@ -12,7 +19,8 @@ module.exports = function(grunt) {
     connect: {
       options: {
         port: 9000,
-        hostname: 'localhost'
+        hostname: 'localhost',
+        base: 'src'
       },
       server: {
         options: {
@@ -27,11 +35,11 @@ module.exports = function(grunt) {
       },
       livereload:{
         files:[
-            'index.html'
+            'src/index.html'
         ]
       },
       'index':{
-        files:['index.html'],
+        files:['src/index.html'],
         tasks:[]
       }
     }
@@ -44,5 +52,5 @@ require('load-grunt-tasks')(grunt);
       'watch'
   ]);
 
-  grunt.registerTask('default', ['build']);
+  grunt.registerTask('default', ['help']);
 };
