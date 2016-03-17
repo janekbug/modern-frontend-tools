@@ -16,34 +16,6 @@ module.exports = function (grunt) {
                 bower: '<%= cfg.paths.root %>/bower_components'
             }
         },
-        clean:{
-            output:'<%= cfg.paths.output %>',
-            options:{
-                force: true
-            }
-        },
-        copy: {
-            html: {
-                src: '<%= cfg.paths.source %>/index.html',
-                dest: '<%= cfg.paths.output %>/index.html'
-            },
-            css: {
-                src: '<%= cfg.paths.source %>/css/jumbotron.css',
-                dest: '<%= cfg.paths.output %>/css/jumbotron.css'
-            },
-            bootstrapStyle:{
-                src: '<%= cfg.paths.bower %>/bootstrap/dist/css/bootstrap.min.css',
-                dest: '<%= cfg.paths.output %>/css/bootstrap.min.css'
-            },
-            bootstrapJs:{
-                src: '<%= cfg.paths.bower %>/bootstrap/dist/js/bootstrap.min.js',
-                dest: '<%= cfg.paths.output %>/js/bootstrap.min.js'
-            },
-            jquery:{
-                src: '<%= cfg.paths.bower %>/jquery/dist/jquery.min.js',
-                dest: '<%= cfg.paths.output %>/js/jquery.min.js'
-            }
-        },
         connect: {
             options: {
                 port: 9000,
@@ -76,11 +48,12 @@ module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
 
     grunt.registerTask('build', [
-        'clean',
-        'copy',
+        'cleanDist',
+        'copyToDist',
         'connect',
         'watch'
     ]);
 
     grunt.registerTask('default', ['help']);
+    grunt.task.loadTasks('grunt-tasks');
 };
